@@ -40,7 +40,7 @@ public class Parser {
         StringBuilder sb = new StringBuilder();
         for (Schedule schedule : scheduleList) {
             String sqlLine = String.format("insert into `Schedule` values (%d, now(), now(), '%s', '%s', '%s');\n",
-                    index++, schedule.getFromDate(), schedule.getToDate(), schedule.getTitle());
+                    index++, schedule.getToDate(), schedule.getFromDate(), schedule.getTitle());
             sb.append(sqlLine);
         }
         return sb.toString();
